@@ -20,7 +20,7 @@ projeto-devops-launch/
 │   ├── js/
 │   ├── index.html
 │   └── metadata.json
-│
+├── deploy.sh
 ├── README.md
 └── .gitignore
 ```
