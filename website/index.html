@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Projeto prático de mentoria DevOps com Docker, Amazon ECR e Amazon EC2."
+  />
+
+  <title>DevOps Launch | Projeto 01</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container navigation">
+      <a href="#inicio" class="brand" aria-label="Ir para o início">
+        <span class="brand-icon">&lt;/&gt;</span>
+
+        <span>
+          <strong>DevOps Launch</strong>
+          <small>Projeto prático 01</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="menu" id="menu">
+        <a href="#inicio">Início</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#arquitetura">Arquitetura</a>
+        <a href="#status">Status</a>
+      </nav>
+
+      <div class="environment-badge">
+        <span class="pulse"></span>
+        Ambiente monitorado
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-light hero-light-one"></div>
+      <div class="hero-light hero-light-two"></div>
+
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow">PRÁTICA DEVOPS • PROJETO 01</span>
+
+          <h1>
+            Da aplicação local
+            <span>ao deploy na AWS.</span>
+          </h1>
+
+          <p>
+            Uma experiência prática para aprender como construir, empacotar e
+            publicar uma aplicação utilizando HTML, CSS, JavaScript, Docker,
+            Amazon ECR e Amazon EC2.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#arquitetura" class="button button-primary">
+              Explorar arquitetura
+            </a>
+
+            <button class="button button-secondary" id="openStatusButton">
+              Consultar ambiente
+            </button>
+          </div>
+
+          <div class="hero-features">
+            <span><i></i> Aplicação containerizada</span>
+            <span><i></i> Imagem armazenada no ECR</span>
+            <span><i></i> Deploy executado na EC2</span>
+          </div>
+        </div>
+
+        <div class="terminal-card" aria-label="Resumo do pipeline">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <span>deploy.sh</span>
+          </div>
+
+          <div class="terminal-body">
+            <p><span class="terminal-symbol">$</span> docker build -t devops-launch .</p>
+            <p class="terminal-success">✓ Imagem criada com sucesso</p>
+
+            <p><span class="terminal-symbol">$</span> docker push aws_account/ecr</p>
+            <p class="terminal-success">✓ Imagem enviada ao Amazon ECR</p>
+
+            <p><span class="terminal-symbol">$</span> docker run -d -p 80:80 devops-launch</p>
+            <p class="terminal-success">✓ Aplicação disponível na Amazon EC2</p>
+
+            <div class="terminal-status">
+              <span class="pulse"></span>
+              Atividade concluída
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tecnologias">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">TECNOLOGIAS DO PROJETO</span>
+          <h2>Do código ao ambiente de produção</h2>
+          <p>
+            Cada etapa representa uma parte importante do fluxo de entrega de
+            uma aplicação moderna.
+          </p>
+        </div>
+
+        <div class="technology-grid">
+          <article class="technology-card">
+            <div class="technology-number">01</div>
+            <div class="technology-icon">🐳</div>
+            <h3>Docker</h3>
+            <p>
+              Empacota a aplicação e suas dependências em uma imagem
+              reproduzível e portátil.
+            </p>
+            <span class="technology-tag">Containerização</span>
+          </article>
+
+          <article class="technology-card">
+            <div class="technology-number">02</div>
+            <div class="technology-icon">☁️</div>
+            <h3>Amazon ECR</h3>
+            <p>
+              Armazena a imagem Docker de forma privada e integrada aos serviços
+              da AWS.
+            </p>
+            <span class="technology-tag">Registry de imagens</span>
+          </article>
+
+          <article class="technology-card">
+            <div class="technology-number">03</div>
+            <div class="technology-icon">🖥️</div>
+            <h3>Amazon EC2</h3>
+            <p>
+              Executa o container em uma instância virtual acessível pela
+              internet.
+            </p>
+            <span class="technology-tag">Servidor na nuvem</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architecture-section" id="arquitetura">
+      <div class="container architecture-layout">
+        <div class="architecture-copy">
+          <span class="eyebrow">ARQUITETURA DO DEPLOY</span>
+          <h2>Um fluxo simples, visual e profissional</h2>
+
+          <p>
+            O projeto começa no computador do aluno, passa pela criação da imagem
+            Docker, segue para o Amazon ECR e termina com a execução do container
+            em uma instância Amazon EC2.
+          </p>
+
+          <div class="architecture-list">
+            <div>
+              <span>1</span>
+              <p><strong>Desenvolvimento</strong> da página com HTML, CSS e JavaScript.</p>
+            </div>
+
+            <div>
+              <span>2</span>
+              <p><strong>Build</strong> da imagem utilizando um Dockerfile.</p>
+            </div>
+
+            <div>
+              <span>3</span>
+              <p><strong>Push</strong> da imagem para o repositório Amazon ECR.</p>
+            </div>
+
+            <div>
+              <span>4</span>
+              <p><strong>Deploy</strong> do container em uma instância Amazon EC2.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="architecture-flow">
+          <div class="flow-card">
+            <span class="flow-icon">💻</span>
+            <strong>Aplicação</strong>
+            <small>HTML • CSS • JavaScript</small>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-card">
+            <span class="flow-icon">🐳</span>
+            <strong>Docker</strong>
+            <small>Build da imagem</small>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-card">
+            <span class="flow-icon">📦</span>
+            <strong>Amazon ECR</strong>
+            <small>Armazenamento</small>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-card">
+            <span class="flow-icon">☁️</span>
+            <strong>Amazon EC2</strong>
+            <small>Container em execução</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section status-section" id="status">
+      <div class="container">
+        <div class="section-heading status-heading">
+          <div>
+            <span class="eyebrow">MONITORAMENTO DO PROJETO</span>
+            <h2>Status do ambiente</h2>
+            <p>
+              As informações abaixo são carregadas automaticamente a partir do
+              ambiente real do aluno na Amazon EC2.
+            </p>
+          </div>
+
+          <div class="online-indicator">
+            <span class="pulse"></span>
+            Sistema disponível
+          </div>
+        </div>
+
+        <div class="status-grid">
+          <article class="status-card">
+            <span>Container</span>
+            <strong id="containerStatus">Carregando...</strong>
+            <small>Imagem Docker do projeto</small>
+          </article>
+
+          <article class="status-card">
+            <span>Servidor</span>
+            <strong id="serverStatus">Carregando...</strong>
+            <small>Servidor web Nginx</small>
+          </article>
+
+          <article class="status-card">
+            <span>Porta</span>
+            <strong id="portStatus">Carregando...</strong>
+            <small>Porta pública da aplicação</small>
+          </article>
+
+          <article class="status-card">
+            <span>Cloud</span>
+            <strong id="cloudStatus">Carregando...</strong>
+            <small>Ambiente de execução</small>
+          </article>
+
+          <article class="status-card">
+            <span>Último deploy</span>
+            <strong id="deployDate">Carregando...</strong>
+            <small>Data e horário da publicação</small>
+          </article>
+
+          <article class="status-card">
+            <span>Status geral</span>
+            <strong id="generalStatus">Carregando...</strong>
+            <small>Disponibilidade da aplicação</small>
+          </article>
+        </div>
+
+        <div class="status-action">
+          <button class="button button-primary" id="refreshStatusButton">
+            Atualizar informações
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>@Heberton Geovane - Prática DevOps</p>
+
+
+      <a
+        class="linkedin-link"
+        href="https://www.linkedin.com/in/heberton-geovane/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn de Heberton Geovane"
+        title="LinkedIn"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M6.94 8.5H3.56V19h3.38V8.5ZM5.25 3A1.96 1.96 0 1 0 5.25 6.92 1.96 1.96 0 0 0 5.25 3ZM20.44 13.02c0-3.16-1.69-4.63-3.94-4.63-1.82 0-2.63 1-3.08 1.7V8.5h-3.37V19h3.37v-5.2c0-1.37.26-2.7 1.96-2.7 1.67 0 1.69 1.56 1.69 2.79V19h3.37v-5.98Z"
+          />
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <div class="modal" id="statusModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" id="closeModalButton" aria-label="Fechar">
+        ×
+      </button>
+
+      <span class="modal-icon">☁️</span>
+      <h2>Informações do ambiente</h2>
+
+      <div class="modal-information">
+        <p><span>Container</span><strong id="modalContainer">Carregando...</strong></p>
+        <p><span>Servidor</span><strong id="modalServer">Carregando...</strong></p>
+        <p><span>Porta</span><strong id="modalPort">Carregando...</strong></p>
+        <p><span>Deploy</span><strong id="modalDeploy">Carregando...</strong></p>
+        <p><span>Cloud</span><strong id="modalCloud">Carregando...</strong></p>
+        <p><span>Status</span><strong id="modalStatus">Carregando...</strong></p>
+      </div>
+
+      <button class="button button-primary modal-button" id="modalOkButton">
+        Entendido
+      </button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

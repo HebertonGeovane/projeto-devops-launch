@@ -1,0 +1,15 @@
+{
+  "containerName": "Aguardando deploy",
+  "containerStatus": "Indisponível",
+  "server": "Não identificado",
+  "port": "Não identificada",
+  "deployDate": "Não disponível",
+  "cloudProvider": "Não identificado",
+  "region": "Não identificada",
+  "availabilityZone": "Não identificada",
+  "instanceId": "Não identificado",
+  "instanceType": "Não identificado",
+  "privateIp": "Não identificado",
+  "publicIp": "Não identificado",
+  "applicationStatus": "Metadados ainda não gerados"
+}
